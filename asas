@@ -1,0 +1,75 @@
+ $result = $conn->query("SELECT imagecontent  FROM studentreg WHERE name = 'siddu'");
+
+
+        $imgData = mysqli_fetch_array($result);
+        //Render image
+
+
+        <img src="<?php echo $imgData['imagecontent'];?>">
+
+
+
+
+
+
+
+          .sidenav {
+                    height: 100%; /* 100% Full-height */
+                    width: 0; /* 0 width - change this with JavaScript */
+                    position: fixed; /* Stay in place */
+                    z-index: 1; /* Stay on top */
+                    top: 0; /* Stay at the top */
+                    left: 0;
+                    background-color: #111; /* Black*/
+                    overflow-x: hidden; /* Disable horizontal scroll */
+
+                    padding-top: 60px; /* Place content 60px from the top */
+                    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+                }
+                .sidenav a {
+                    padding: 8px 8px 8px 8px;
+                    text-decoration: none;
+                    font-size: 25px;
+                    color: rgb(198, 206, 199);
+                    display: block;
+                    transition: 0.3s;
+                }
+
+                /* When you mouse over the navigation links, change their color */
+                .sidenav a:hover {
+                    background-color: rgba(255, 255, 255, 0);
+                    color: #f8fff4;
+                }
+
+                /* Position and style the close button (top right corner) */
+                .sidenav .closebtn {
+                    position: absolute;
+                    top: 0;
+                    right: 25px;
+                    font-size: 36px;
+                    margin-left: 50px;
+                }
+
+                /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+                </style>
+                <script>
+                    function openNav() {
+                        document.getElementById("mySidenav").style.width = "250px";
+
+                    }
+
+                    /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+                    function closeNav() {
+                        document.getElementById("mySidenav").style.width = "0";
+
+                    }
+
+
+
+
+
+                    <div class="sidenav" id="mySidenav">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <a href="">account</a>
+                            </div>
+                            <span style="font-size:30px;cursor:pointer ; float: left ; margin-left: 0.7vw; margin-top : 0.3vw" onclick="openNav()">&#9776;</span>
